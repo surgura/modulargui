@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1438966638 source:d:\drive\documents\projects\modulargui\test\main.c
+	<Modular/Modular.h>
+	<Mgui/Mgui.h>
+
+1438938467 d:\drive\documents\projects\libmodular\include\modular\modular.h
+	"FactoryFunctions.h"
+
+1438954979 d:\drive\documents\projects\libmodular\include\modular\factoryfunctions.h
+	"Types.h"
+	"Factory.h"
+
+1438955133 d:\drive\documents\projects\libmodular\include\modular\types.h
+
+1438954951 d:\drive\documents\projects\libmodular\include\modular\factory.h
+	"Types.h"
+	"LinkedList.h"
+
+1433607249 d:\drive\documents\projects\libmodular\include\modular\linkedlist.h
+	"Types.h"
+
+1438966541 d:\drive\documents\projects\modulargui\include\mgui\mgui.h
+	"Mgui/Gui.h"
+
+1438966711 d:\drive\documents\projects\modulargui\include\mgui\gui.h
+	<stdio.h>
+
