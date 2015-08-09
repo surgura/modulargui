@@ -15,8 +15,7 @@
 /**
     Include files
 **/
-
-#include <stdio.h>
+#include "Modular/Modular.h"
 
 typedef struct
 {
@@ -32,18 +31,18 @@ typedef struct
     @param  module          The id of this module.
     @param  instance        The id of the instance being created.
 **/
-void Mgui_Construct(Mdr_ModuleId moduleId, Mdr_InstanceId instanceId)
-{
-    printf("created gui state");
-}
+void Mgui_Construct(Mdr_ModuleId moduleId, Mdr_InstanceId instanceId);
 
 /**
     Destruct function for the gui module
     @param  module          The id of this module.
     @param  instance        The id of the instance being destroyed.
 **/
-void Mgui_Destruct(Mdr_ModuleId module, Mdr_InstanceId instance)
-{
-}
+void Mgui_Destruct(Mdr_ModuleId module, Mdr_InstanceId instance);
+
+/**
+    @todo
+**/
+void Mgui_NewWindow(Mgui_GuiInstance* guiInstance);
 
 #endif // MGUI_GUI_H
