@@ -8,6 +8,9 @@
 #ifndef GRPH_RENDER_TARGET_H
 #define GRPH_RENDER_TARGET_H
 
+// Include files
+#include "Texture.h"
+
 /// A target that can be rendered to.
 typedef struct
 {
