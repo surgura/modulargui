@@ -10,6 +10,7 @@
 
 // Include files
 #include "Texture.h"
+#include "Vector2u32.h"
 
 /// A target that can be rendered to.
 typedef struct
