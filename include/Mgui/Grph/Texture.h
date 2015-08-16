@@ -20,5 +20,10 @@ typedef struct
 /// @param  userData    The user provided data that actually is the texture
 void Grph_Texture_Construct(Grph_Texture* texture, void* userData);
 
+/// Get the user data from a texture
+/// @param  texture     The texture to get the user data from
+/// @return             The user data from the texture
+void* Grph_Texture_GetUserData(Grph_Texture* texture);
+
 // End header guard
 #endif GRPH_TEXTURE_H
