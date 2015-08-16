@@ -8,7 +8,26 @@
 #ifndef MGUI_RENDER_TARGET_H
 #define MGUI_RENDER_TARGET_H
 
+/// A target that can be rendered to.
+typedef struct
+{
+    /// The user provided data that is sent with all functions.
+    void* userData;
+    
+    /// Draw a texture
+    /// @param  userData    The user data stored in this object
+    /// @param  texture     The texture to draw
+    /// @param  position    The position to draw at. From the left top corner of the texture.
+    void (*drawTexture) (void* userData, Grph_Texture* texture, Grph_Vector2u32* position);
+} Mgui_RenderTarget;
 
+/// Construct a render target
+/// @param  userData    Data that is sent with all functions
+/// @param  drawTexture Function to draw a texture to the render target
+///     @param  userData    The user data provided in this function
+///     @param  texture     The texture to draw
+///     @param  position    The position to draw at. From the left top corner of the texture.
+Mgui_RenderTarget_Construct(void* userData, void (*drawTexture) (void* userData, Grph_Texture* texture, Grph_Vector2u32* position));
 
 // End header guard
 #endif // MGUI_RENDER_TARGET_H
