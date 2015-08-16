@@ -32,7 +32,7 @@ typedef struct
 ///     @param  userData        The user data provided in this function
 ///     @param  texture         The texture to draw
 ///     @param  position        The position to draw at. From the left top corner of the texture.
-Grph_RenderTarget_Construct(Grph_RenderTarget* renderTarget, void* userData, void (*drawTexture) (void* userData, Grph_Texture* texture, Grph_Vector2u32* position));
+void Grph_RenderTarget_Construct(Grph_RenderTarget* renderTarget, void* userData, void (*drawTexture) (void* userData, Grph_Texture* texture, Grph_Vector2u32* position));
 
 // End header guard
 #endif // GRPH_RENDER_TARGET_H
