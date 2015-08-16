@@ -26,4 +26,4 @@ void Grph_Texture_Construct(Grph_Texture* texture, void* userData);
 void* Grph_Texture_GetUserData(Grph_Texture* texture);
 
 // End header guard
-#endif GRPH_TEXTURE_H
+#endif // GRPH_TEXTURE_H
