@@ -6,9 +6,6 @@
     @author Aart Stuurman
 **/
 
-/**
-    Header guard
-**/
 #ifndef MGUI_MGUI_H
 #define MGUI_MGUI_H
 
@@ -16,6 +13,7 @@
     Include files
 **/
 #include "Mgui/Gui.h"
+#include "Mgui/Image.h"
 
 /**
     This is the starting point for every use of ModularGUI.

@@ -6,9 +6,6 @@
     @author Aart Stuurman
 **/
 
-/**
-    Header guard
-**/
 #ifndef MGUI_GUI_H
 #define MGUI_GUI_H
 
@@ -16,10 +13,13 @@
     Include files
 **/
 #include "Modular/Modular.h"
+#include "Grph/RenderTarget.h"
+#include "LinkedList.h"
+#include "Element.h"
 
 typedef struct
 {
-
+    Mgui_LinkedList elements;
 } Mgui_Gui;
 
 typedef struct
@@ -38,11 +38,17 @@ void Mgui_Construct(Mdr_ModuleId moduleId, Mdr_InstanceId instanceId);
     @param  module          The id of this module.
     @param  instance        The id of the instance being destroyed.
 **/
-void Mgui_Destruct(Mdr_ModuleId module, Mdr_InstanceId instance);
+void Mgui_Destruct(Mdr_ModuleId moduleId, Mdr_InstanceId instanceId);
 
 /**
-    @todo
+    Draw the gui
+    @param  renderTarget    The render target to draw to.
 **/
-void Mgui_NewWindow(Mgui_GuiInstance* guiInstance);
+void Mgui_Draw(Mgui_Gui* gui, Grph_RenderTarget* renderTarget);
+
+/// Add an element to the root draw list
+/// @param  gui     The gui to add to
+/// @param  element The element to add
+void Mgui_AddElement(Mgui_Gui* gui, Mgui_Element* element);
 
 #endif // MGUI_GUI_H

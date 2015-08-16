@@ -8,11 +8,19 @@ int main()
 
     Mdr_ModuleId guiId;
     Mdr_Register(&factory, &guiId, sizeof(Mgui_Gui), sizeof(Mgui_GuiInstance), Mgui_Construct, Mgui_Destruct);
+    Mgui_Gui* gui = Mdr_GetModuleCommonData(guiId);
 
-    Mdr_InstanceId instance;
-    Mdr_Instantiate(&factory, &instance);
+    Mdr_InstanceId instanceId;
+    Mdr_Instantiate(&factory, &instanceId);
+    Mgui_Image* image = Mgui_NewImage(gui, Mdr_GetModuleInstanceData(guiId, instanceId));
 
-    Mdr_Destroy(&factory, instance);
+    Grph_RenderTarget renderTarget;
+    while (1)
+    {
+        Mgui_Draw(gui, &renderTarget);
+    }
+
+    Mdr_Destroy(&factory, instanceId);
 
     Mdr_Cleanup(&factory);
 
